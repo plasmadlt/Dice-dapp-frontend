@@ -1,0 +1,17 @@
+<div class="slider-wrapper">
+
+  <div class="slider-roll-win" [class.show]="rollWin" [ngStyle]="{left: rollWin + '%'}">
+    <span>{{ rollWin }}</span>
+  </div>
+
+  <div class="slider-track-wrapper">
+    <div class="slider-track-background"></div>
+    <div class="slider-track-fill" [ngStyle]="{'transform': 'translateX(' + (value - 100) + '%)'}"></div>
+  </div>
+
+  <div class="slider-thumb-container" [ngStyle]="{'transform': 'translateX(' + (value - 100) + '%)'}">
+    <div class="slider-focus-ring"></div>
+    <div class="slider-thumb"></div>
+  </div>
+
+</div>

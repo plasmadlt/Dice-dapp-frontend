@@ -1,0 +1,17 @@
+<div class="error-block" *ngIf="error">
+
+  <h3 class="caption">{{ 'authorization_error' | translate }}</h3>
+
+  <p class="code">{{ error.code }}</p>
+
+  <p class="description">{{ error.description }}</p>
+
+</div>
+
+<div class="button-block" *ngIf="error">
+  <button class="btn btn-primary" routerLink="/">{{ 'back' | translate }}</button>
+</div>
+
+<div class="loading" *ngIf="loading">
+  <mat-spinner [diameter]="30"></mat-spinner>
+</div>

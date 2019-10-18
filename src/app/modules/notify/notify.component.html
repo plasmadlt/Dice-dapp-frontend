@@ -1,0 +1,23 @@
+<div class="lib-notify-alert-block">
+
+  <div *ngFor="let alert of alerts"
+       class="alert"
+       [ngClass]="'alert-' + alert.type"
+       role="alert"
+       (click)="hideAlert(alert._id)"
+       @alerts>
+
+    <div class="alert-block">
+
+      <h5 class="alert-heading">
+        <i class="ico pi" [ngClass]="'pi-' + alert.type"></i>
+        <span [innerHtml]="alert.title"></span>
+      </h5>
+
+      <p class="alert-content" [innerHtml]="alert.message"></p>
+
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,202 @@
+[
+  {
+    "title": "Plasma",
+    "code": "PLASMA",
+    "icon": "pi-plasma"
+  },
+  {
+    "title": "United States Dollar",
+    "code": "USDP",    
+    "symbol": "$"
+  },
+  {
+    "title": "Euro",
+    "code": "EURP",
+    "symbol": "€"
+  },
+  {
+    "title": "British Pound Sterling",
+    "code": "GBPP",
+    "symbol": "£"
+  },
+  {
+    "title": "Russian Ruble",
+    "code": "RUBP",
+    "symbol": "₽"
+  },
+  {
+    "title": "Czech Republic Koruna",
+    "code": "CZKP",
+    "symbol": "Kč"
+  },
+  {
+    "title": "Singapore Dollar",
+    "code": "SGDP",
+    "symbol": "$"
+  },
+  {
+    "title": "Hong Kong Dollar",
+    "code": "HKDP",
+    "symbol": "HK$"
+  },
+  {
+    "title": "South Korean Won",
+    "code": "KRWP",
+    "symbol": "₩"
+  },
+  {
+    "title": "Ukraine Hryvnia",
+    "code": "UAHP",
+    "symbol": "₴‏"
+  },
+  {
+    "title": "Armenian Dram",
+    "code": "AMDP",
+    "symbol": "֏"
+  },
+  {
+    "title": "Australian Dollar",
+    "code": "AUDP",
+    "symbol": "$"
+  },
+  {
+    "title": "Azerbaijani Manat",
+    "code": "AZNP",
+    "symbol": "₼"
+  },
+  {
+    "title": "Brazilian Real",
+    "code": "BRLP",
+    "symbol": "R$"
+  },
+  {
+    "title": "Belarusian Ruble",
+    "code": "BYNP",
+    "symbol": "Br"
+  },
+  {
+    "title": "Canadian Dollar",
+    "code": "CADP",
+    "symbol": "$"
+  },
+  {
+    "title": "Swiss Franc",
+    "code": "CHFP",
+    "symbol": "CHFP"
+  },
+  {
+    "title": "Chilean Peso",
+    "code": "CLPP",
+    "symbol": "$"
+  },
+  {
+    "title": "Chinese Yuan",
+    "code": "CNYP",
+    "symbol": "¥"
+  },
+  {
+    "title": "Danish Krone",
+    "code": "DKKP",
+    "symbol": "kr."
+  },
+  {
+    "title": "Hungarian Forint",
+    "code": "HUFP",
+    "symbol": "Ft"
+  },
+  {
+    "title": "Israeli New Sheqel",
+    "code": "ILSP",
+    "symbol": "₪"
+  },
+  {
+    "title": "Indian Rupee",
+    "code": "INRP",
+    "symbol": "₹"
+  },
+  {
+    "title": "Japanese Yen",
+    "code": "JPYP",
+    "symbol": "￥"
+  },
+  {
+    "title": "Kazakhstani Tenge",
+    "code": "KZTP",
+    "symbol": "₸"
+  },
+  {
+    "title": "Mexican Peso",
+    "code": "MXNP",
+    "symbol": "$"
+  },
+  {
+    "title": "Malaysian Ringgit",
+    "code": "MYRP",
+    "symbol": "RM"
+  },
+  {
+    "title": "Norwegian Krone",
+    "code": "NOKP",
+    "symbol": "kr"
+  },
+  {
+    "title": "New Zealand Dollar",
+    "code": "NZDP",
+    "symbol": "$"
+  },
+  {
+    "title": "Omani Rial",
+    "code": "OMRP",
+    "symbol": "ر.ع.‏"
+  },
+  {
+    "title": "Philippine Peso",
+    "code": "PHPP",
+    "symbol": "₱"
+  },
+  {
+    "title": "Pakistani Rupee",
+    "code": "PKRP",
+    "symbol": "Rs"
+  },
+  {
+    "title": "Polish Zloty",
+    "code": "PLNP",
+    "symbol": "zł"
+  },
+  {
+    "title": "Swedish Krona",
+    "code": "SEKP",
+    "symbol": "kr"
+  },
+  {
+    "title": "Thai Baht",
+    "code": "THBP",
+    "symbol": "THB"
+  },
+  {
+    "title": "Turkish Lira",
+    "code": "TRYP",
+    "symbol": "₺"
+  },
+  {
+    "title": "New Taiwan Dollar",
+    "code": "TWDP",
+    "symbol": "$"
+  },
+  {
+    "title": "South African Rand",
+    "code": "ZARP",
+    "symbol": "R"
+  },
+  {
+    "title": "SDR Fiat",
+    "code": "SDRF",
+    "symbol": "SDRF"
+  },
+  {
+    "title": "SDR Crypto",
+    "code": "SDRC",
+    "symbol": "SDRC"
+  }
+]

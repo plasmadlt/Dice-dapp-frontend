@@ -1,0 +1,40 @@
+
+:host {
+  min-height: calc(100vh - 80px);
+  padding: 25px 0;
+  display: block;
+}
+
+.error-block {
+  min-height: 190px;
+  padding: 25px 30px;
+  background: linear-gradient(180deg, rgba(67, 73, 200, 0.4) 0%, rgba(70, 60, 193, 0.4) 100%);
+  border-radius: 12px;
+  text-align: center;
+
+  .caption {
+    margin-top: 0;
+    color: #FFF;
+  }
+
+  .code {
+    text-transform: uppercase;
+    color: #F74749;
+  }
+
+  .description {
+    color: #F74749;
+  }
+}
+
+.button-block {
+  margin-top: 35px;
+  text-align: center;
+}
+
+.loading {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

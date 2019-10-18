@@ -1,0 +1,160 @@
+
+<mat-tab-group (selectedIndexChange)="tabChange($event)" [(selectedIndex)]="tabIndex">
+
+  <mat-tab [label]="'my_bets' | translate" [disabled]="myTabIsDisabled()">
+
+    <div class="loading" *ngIf="loading">
+      <mat-spinner [diameter]="30"></mat-spinner>
+    </div>
+
+    <div class="table" *ngIf="!loading && bets">
+
+      <div class="table-header">
+
+        <div class="time">
+          <span>{{ 'time' | translate }}</span>
+        </div>
+
+        <div class="tx">
+          <span>{{ 'tx' | translate }}</span>
+        </div>
+
+        <div class="bettor">
+          <span>{{ 'bettor' | translate }}</span>
+        </div>
+
+        <div class="roll-under">
+          <span>{{ 'roll_under' | translate }}</span>
+        </div>
+
+        <div class="bet-amount">
+          <span>{{ 'bet_amount' | translate }}</span>
+        </div>
+
+        <div class="roll">
+          <span>{{ 'roll' | translate }}</span>
+        </div>
+
+        <div class="payout">
+          <span>{{ 'payout' | translate }}</span>
+        </div>
+
+      </div>
+
+      <div class="table-row" *ngFor="let bet of bets">
+
+        <div class="time">
+          <span>{{ bet.time | amFromUtc | amLocal | amDateFormat : 'HH:mm:ss' }}</span>
+        </div>
+
+        <div class="tx">
+          <a [href]="bet.transactionUrl" target="_blank">{{ bet.transactionUrl.substr(-6, 6) }}</a>
+        </div>
+
+        <div class="bettor">
+          <span>{{ bet.bettor }}</span>
+        </div>
+
+        <div class="roll-under">
+          <span>{{ bet.rollUnder }}</span>
+        </div>
+
+        <div class="bet-amount">
+          <span>{{ bet.betAmount | roundMoney | separateComas }}</span>
+          <span class="currency-code">{{ bet.currencyCode | formatTokenCode }}</span>
+        </div>
+
+        <div class="roll">
+          <span>{{ bet.roll }}</span>
+        </div>
+
+        <div class="payout" [class.lose]="bet.payout < 0">
+          <span>{{ bet.payout | roundMoney | separateComas }}</span>
+          <span class="currency-code">{{ bet.currencyCode | formatTokenCode }}</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </mat-tab>
+
+  <mat-tab [label]="'all_bets' | translate">
+
+    <div class="loading" *ngIf="loading">
+      <mat-spinner [diameter]="30"></mat-spinner>
+    </div>
+
+    <div class="table" *ngIf="!loading && bets">
+
+      <div class="table-header">
+
+        <div class="time">
+          <span>{{ 'time' | translate }}</span>
+        </div>
+
+        <div class="tx">
+          <span>{{ 'tx' | translate }}</span>
+        </div>
+
+        <div class="bettor">
+          <span>{{ 'bettor' | translate }}</span>
+        </div>
+
+        <div class="roll-under">
+          <span>{{ 'roll_under' | translate }}</span>
+        </div>
+
+        <div class="bet-amount">
+          <span>{{ 'bet_amount' | translate }}</span>
+        </div>
+
+        <div class="roll">
+          <span>{{ 'roll' | translate }}</span>
+        </div>
+
+        <div class="payout">
+          <span>{{ 'payout' | translate }}</span>
+        </div>
+
+      </div>
+
+      <div class="table-row" *ngFor="let bet of bets">
+
+        <div class="time">
+          <span>{{ bet.time | amFromUtc | amLocal | amDateFormat : 'HH:mm:ss' }}</span>
+        </div>
+
+        <div class="tx">
+          <a [href]="bet.transactionUrl" target="_blank">{{ bet.transactionUrl.substr(-6, 6) }}</a>
+        </div>
+
+        <div class="bettor">
+          <span>{{ bet.bettor }}</span>
+        </div>
+
+        <div class="roll-under">
+          <span>{{ bet.rollUnder }}</span>
+        </div>
+
+        <div class="bet-amount">
+          <span>{{ bet.betAmount | roundMoney | separateComas }}</span>
+          <span class="currency-code">{{ bet.currencyCode | formatTokenCode }}</span>
+        </div>
+
+        <div class="roll">
+          <span>{{ bet.roll }}</span>
+        </div>
+
+        <div class="payout" [class.lose]="bet.payout < 0">
+          <span>{{ bet.payout | roundMoney | separateComas }}</span>
+          <span class="currency-code">{{ bet.currencyCode | formatTokenCode }}</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </mat-tab>
+
+</mat-tab-group>

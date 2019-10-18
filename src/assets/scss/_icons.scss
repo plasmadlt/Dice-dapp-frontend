@@ -1,0 +1,43 @@
+@font-face {
+    font-family: "PlasmaIcons";
+    src: url("../fonts/plasma-icons/PlasmaIcons.eot?de814b4d348b6494821727aa0ebc3c16?#iefix") format("embedded-opentype"),
+url("../fonts/plasma-icons/PlasmaIcons.woff2?de814b4d348b6494821727aa0ebc3c16") format("woff2"),
+url("../fonts/plasma-icons/PlasmaIcons.woff?de814b4d348b6494821727aa0ebc3c16") format("woff"),
+url("../fonts/plasma-icons/PlasmaIcons.ttf?de814b4d348b6494821727aa0ebc3c16") format("truetype"),
+url("../fonts/plasma-icons/PlasmaIcons.svg?de814b4d348b6494821727aa0ebc3c16#PlasmaIcons") format("svg");
+}
+
+.pi {
+  display: inline-block;
+  font: 400 14px/1 "PlasmaIcons", sans-serif;
+  font-size: inherit;
+  text-rendering: auto;
+  text-transform: none;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.pi-danger:before {
+    content: "\f101";
+}
+
+.pi-info:before {
+    content: "\f102";
+}
+
+.pi-plasma:before {
+    content: "\f103";
+}
+
+.pi-speaker-off:before {
+    content: "\f104";
+}
+
+.pi-speaker-on:before {
+    content: "\f105";
+}
+
+.pi-success:before {
+    content: "\f106";
+}

@@ -1,0 +1,84 @@
+@import "../../../assets/scss/mixins";
+
+.jackpot {
+  height: 70px;
+  margin-top: 50px;
+  background: #1F1769;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+
+  .left-background, .right-background,.common-background  {
+    position: absolute;
+  }
+
+  .left-background {
+    left: 0;
+  }
+
+  .right-background {
+    right: 0;
+  }
+
+  .common-background {
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: .4;
+  }
+
+  .label {
+    left: 80px;
+    margin: 2px 0;
+    position: absolute;
+  }
+
+  .count {
+    right: 120px;
+    color: #FFF;
+    font-family: Formular, sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 70px;
+    position: absolute;
+
+    .currency {
+      color: #FFD600;
+    }
+  }
+
+  @include media-breakpoint(false, 768px) {
+
+    .left-background, .right-background {
+      display: none;
+    }
+
+    .label {
+      left: 10px;
+      height: 50px;
+      width: auto;
+      margin: 10px 0;
+    }
+
+    .count {
+      right: 30px;
+    }
+  }
+
+  @include screen-lt-sm {
+    margin: 0 -15px;
+    border-radius: 0;
+
+    .label {
+      left: 0;
+      height: 36px;
+      margin: 17px 0;
+    }
+
+    .count {
+      right: 20px;
+      font-size: 16px;
+    }
+  }
+}

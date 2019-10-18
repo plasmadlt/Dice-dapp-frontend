@@ -1,0 +1,139 @@
+@import "../../../assets/scss/mixins";
+
+:host {
+  padding: 35px 0;
+  display: block;
+
+  .loading {
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .table {
+
+    .table-header, .table-row {
+      min-height: 50px;
+      border-bottom: 1px solid #372E82;
+      display: flex;
+      align-items: center;
+
+      .time, .tx {
+        width: 100px;
+      }
+
+      .bettor {
+        width: 140px;
+      }
+
+      .roll-under {
+        width: 100px;
+      }
+
+      .bet-amount {
+        width: 160px;
+      }
+
+      .roll {
+        width: 80px;
+      }
+
+      .payout {
+        margin-left: auto;
+        text-align: right;
+      }
+    }
+
+    .table-header {
+      margin-top: 15px;
+      font-size: 12px;
+      line-height: 19px;
+      color: #8782B4;
+    }
+
+    .table-row {
+      color: #FFFFFF;
+
+      .bet-amount, .payout {
+
+        .currency-code {
+          margin-left: 5px;
+          color: #476AF5;
+        }
+
+        &.lose {
+          color: #F74749;
+
+          .currency-code {
+            color: #F74749;
+          }
+        }
+      }
+    }
+  }
+
+  @include screen-lt-md {
+
+    .table {
+
+      .table-header, .table-row {
+
+        .time, .tx {
+          display: none;
+        }
+
+        .bet-amount, .payout {
+          width: calc(50% - 160px);
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint(false, 768px) {
+
+    .table {
+
+      .table-header, .table-row {
+
+        .bet-amount, .roll {
+          display: none;
+        }
+
+        .roll-under {
+          text-align: center;
+        }
+
+        .bettor, .payout {
+          width: calc(50% - 50px);
+        }
+      }
+    }
+  }
+
+  @include screen-lt-sm {
+
+    .table {
+
+      .table-header, .table-row {
+
+        .roll-under {
+          width: 80px;
+        }
+
+        .payout, .bettor {
+          width: calc(50% - 40px);
+        }
+      }
+
+      .table-row {
+
+        .bettor, .roll-under, .payout {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

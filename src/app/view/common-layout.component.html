@@ -1,0 +1,61 @@
+<header class="header">
+
+  <div class="logo">
+    <img src="../../assets/images/logos/logo.svg">
+  </div>
+
+  <div class="auth" *ngIf="isAuthenticated === false">
+    <a [href]="authUrl">{{ 'sign_in_with_plasmapay' | translate }}</a>
+  </div>
+
+  <div class="user" *ngIf="isAuthenticated === true" [matMenuTriggerFor]="appMenu">
+
+    <app-avatar [avatar]="user?.avatar?.ref" [name]="user?.displayName" [size]="42"></app-avatar>
+
+    <div class="name">
+      <span>{{ user?.displayName || 'Anonymous' }}</span>
+    </div>
+
+    <div class="open">
+      <img src="./assets/images/select-open.svg">
+    </div>
+
+  </div>
+
+  <mat-menu #appMenu="matMenu">
+
+    <a mat-menu-item
+       href="https://plasmapay.com/">
+      <img src="./assets/images/wallet.svg">
+      <span>{{ 'plasma_wallet' | translate }}</span>
+    </a>
+
+    <a mat-menu-item
+       class="gray-item"
+       href="javascript: void(0)"
+       (click)="logout()">
+      <img src="./assets/images/logout.svg">
+      <span>{{ 'logout' | translate }}</span>
+    </a>
+
+  </mat-menu>
+  
+</header>
+
+<div class="content">
+  
+  <div class="background">
+
+    <div class="image">
+      <img src="../../assets/images/background.jpg">
+    </div>
+
+    <div class="gradient"></div>
+
+  </div>
+
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+
+</div>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Plasma Icons</title>
+  <style>
+
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 10px 20px;
+      text-align: center;
+    }
+
+    .preview {
+      width: 100px;
+      display: inline-block;
+      margin: 10px;
+    }
+
+    .preview .inner {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      background: #f5f5f5;
+      -webkit-border-radius: 3px 3px 0 0;
+      -moz-border-radius: 3px 3px 0 0;
+      border-radius: 3px 3px 0 0;
+    }
+
+    .preview .inner i {
+      line-height: 85px;
+      font-size: 40px;
+      color: #333;
+    }
+
+    .label {
+      display: inline-block;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 5px;
+      font-size: 10px;
+      font-family: Monaco, monospace;
+      color: #666;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      background: #ddd;
+      -webkit-border-radius: 0 0 3px 3px;
+      -moz-border-radius: 0 0 3px 3px;
+      border-radius: 0 0 3px 3px;
+    }
+      @font-face {
+    font-family: "PlasmaIcons";
+    src: url("src/assets/fonts/plasma-icons/PlasmaIcons.eot?93aab4e0de8fb1dc4540064c3edb66de?#iefix") format("embedded-opentype"),
+url("src/assets/fonts/plasma-icons/PlasmaIcons.woff2?93aab4e0de8fb1dc4540064c3edb66de") format("woff2"),
+url("src/assets/fonts/plasma-icons/PlasmaIcons.woff?93aab4e0de8fb1dc4540064c3edb66de") format("woff"),
+url("src/assets/fonts/plasma-icons/PlasmaIcons.ttf?93aab4e0de8fb1dc4540064c3edb66de") format("truetype"),
+url("src/assets/fonts/plasma-icons/PlasmaIcons.svg?93aab4e0de8fb1dc4540064c3edb66de#PlasmaIcons") format("svg");
+}
+
+.pi {
+  display: inline-block;
+  font: 400 14px/1 "PlasmaIcons", sans-serif;
+  font-size: inherit;
+  text-rendering: auto;
+  text-transform: none;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.pi-danger:before {
+    content: "\f101";
+}
+
+.pi-info:before {
+    content: "\f102";
+}
+
+.pi-plasma:before {
+    content: "\f103";
+}
+
+.pi-speaker-off:before {
+    content: "\f104";
+}
+
+.pi-speaker-on:before {
+    content: "\f105";
+}
+
+.pi-success:before {
+    content: "\f106";
+}
+
+</style>
+</head>
+<body>
+
+<h1>Plasma Icons</h1>
+
+
+  <div class="preview">
+            <span class="inner">
+                <i class="pi pi-danger"></i>
+    </span>
+    <br>
+    <span class='label'>.pi-danger</span>
+  </div>
+
+
+  <div class="preview">
+            <span class="inner">
+                <i class="pi pi-info"></i>
+    </span>
+    <br>
+    <span class='label'>.pi-info</span>
+  </div>
+
+
+  <div class="preview">
+            <span class="inner">
+                <i class="pi pi-plasma"></i>
+    </span>
+    <br>
+    <span class='label'>.pi-plasma</span>
+  </div>
+
+
+  <div class="preview">
+            <span class="inner">
+                <i class="pi pi-speaker-off"></i>
+    </span>
+    <br>
+    <span class='label'>.pi-speaker-off</span>
+  </div>
+
+
+  <div class="preview">
+            <span class="inner">
+                <i class="pi pi-speaker-on"></i>
+    </span>
+    <br>
+    <span class='label'>.pi-speaker-on</span>
+  </div>
+
+
+  <div class="preview">
+            <span class="inner">
+                <i class="pi pi-success"></i>
+    </span>
+    <br>
+    <span class='label'>.pi-success</span>
+  </div>
+
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+// Code pro
+@font-face {
+  font-family: "Code pro";
+  src: url("../fonts/code-pro/Code-Pro-Bold.eot") format("embedded-opentype"),
+  url("../fonts/code-pro/Code-Pro-Bold.woff") format("woff"),
+  url("../fonts/code-pro/Code-Pro-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+// Formular
+@font-face {
+  font-family: "Formular";
+  src: url("../fonts/formular/Formular-BlackItalic.eot");
+  src: url("../fonts/formular/Formular-BlackItalic.woff2") format("woff2"),
+  url("../fonts/formular/Formular-BlackItalic.woff") format("woff"),
+  url("../fonts/formular/Formular-BlackItalic.ttf") format("truetype"),
+  url("../fonts/formular/Formular-BlackItalic.svg#Formular-BlackItalic") format("svg"),
+  url("../fonts/formular/Formular-BlackItalic.eot?#iefix") format("embedded-opentype");
+  font-weight: 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Formular";
+  src: url("../fonts/formular/Formular-Black.eot");
+  src: url("../fonts/formular/Formular-Black.woff2") format("woff2"),
+  url("../fonts/formular/Formular-Black.woff") format("woff"),
+  url("../fonts/formular/Formular-Black.ttf") format("truetype"),
+  url("../fonts/formular/Formular-Black.svg#Formular-Black") format("svg"),
+  url("../fonts/formular/Formular-Black.eot?#iefix") format("embedded-opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Formular";
+  src: url("../fonts/formular/Formular-BoldItalic.eot");
+  src: url("../fonts/formular/Formular-BoldItalic.woff2") format("woff2"),
+  url("../fonts/formular/Formular-BoldItalic.woff") format("woff"),
+  url("../fonts/formular/Formular-BoldItalic.ttf") format("truetype"),
+  url("../fonts/formular/Formular-BoldItalic.svg#Formular-BoldItalic") format("svg"),
+  url("../fonts/formular/Formular-BoldItalic.eot?#iefix") format("embedded-opentype");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Formular";
+  src: url("../fonts/formular/Formular-Bold.eot");
+  src: url("../fonts/formular/Formular-Bold.woff2") format("woff2"),
+  url("../fonts/formular/Formular-Bold.woff") format("woff"),
+  url("../fonts/formular/Formular-Bold.ttf") format("truetype"),
+  url("../fonts/formular/Formular-Bold.svg#Formular-Bold") format("svg"),
+  url("../fonts/formular/Formular-Bold.eot?#iefix") format("embedded-opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Formular";
+  src: url("../fonts/formular/Formular-MediumItalic.eot");
+  src: url("../fonts/formular/Formular-MediumItalic.woff2") format("woff2"),
+  url("../fonts/formular/Formular-MediumItalic.woff") format("woff"),
+  url("../fonts/formular/Formular-MediumItalic.ttf") format("truetype"),
+  url("../fonts/formular/Formular-MediumItalic.svg#Formular-MediumItalic") format("svg"),
+  url("../fonts/formular/Formular-MediumItalic.eot?#iefix") format("embedded-opentype");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Formular";
+  src: url("../fonts/formular/Formular-Medium.eot");
+  src: url("../fonts/formular/Formular-Medium.woff2") format("woff2"),
+  url("../fonts/formular/Formular-Medium.woff") format("woff"),
+  url("../fonts/formular/Formular-Medium.ttf") format("truetype"),
+  url("../fonts/formular/Formular-Medium.svg#Formular-Medium") format("svg"),
+  url("../fonts/formular/Formular-Medium.eot?#iefix") format("embedded-opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Formular";
+  src: url("../fonts/formular/Formular-Italic.eot");
+  src: url("../fonts/formular/Formular-Italic.woff2") format("woff2"),
+  url("../fonts/formular/Formular-Italic.woff") format("woff"),
+  url("../fonts/formular/Formular-Italic.ttf") format("truetype"),
+  url("../fonts/formular/Formular-Italic.svg#Formular-Italic") format("svg"),
+  url("../fonts/formular/Formular-Italic.eot?#iefix") format("embedded-opentype");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Formular";
+  src: url("../fonts/formular/Formular.eot");
+  src: url("../fonts/formular/Formular.woff2") format("woff2"),
+  url("../fonts/formular/Formular.woff") format("woff"),
+  url("../fonts/formular/Formular.ttf") format("truetype"),
+  url("../fonts/formular/Formular.svg#Formular") format("svg"),
+  url("../fonts/formular/Formular.eot?#iefix") format("embedded-opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Formular";
+  src: url("../fonts/formular/Formular-LightItalic.eot");
+  src: url("../fonts/formular/Formular-LightItalic.woff2") format("woff2"),
+  url("../fonts/formular/Formular-LightItalic.woff") format("woff"),
+  url("../fonts/formular/Formular-LightItalic.ttf") format("truetype"),
+  url("../fonts/formular/Formular-LightItalic.svg#Formular-LightItalic") format("svg"),
+  url("../fonts/formular/Formular-LightItalic.eot?#iefix") format("embedded-opentype");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Formular";
+  src: url("../fonts/formular/Formular-Light.eot");
+  src: url("../fonts/formular/Formular-Light.woff2") format("woff2"),
+  url("../fonts/formular/Formular-Light.woff") format("woff"),
+  url("../fonts/formular/Formular-Light.ttf") format("truetype"),
+  url("../fonts/formular/Formular-Light.svg#Formular-Light") format("svg"),
+  url("../fonts/formular/Formular-Light.eot?#iefix") format("embedded-opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+// Formular Mono
+@font-face {
+  font-family: "FormularMono";
+  src: url("../fonts/formular-mono/FormularMono.eot");
+  src: url("../fonts/formular-mono/FormularMono.woff2") format("woff2"),
+  url("../fonts/formular-mono/FormularMono.woff") format("woff"),
+  url("../fonts/formular-mono/FormularMono.ttf") format("truetype"),
+  url("../fonts/formular-mono/FormularMono.svg#FormularMono") format("svg"),
+  url("../fonts/formular-mono/FormularMono.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}

@@ -1,0 +1,21 @@
+@font-face {
+    font-family: "{{ fontName }}";
+    src: {{{ src }}};
+}
+
+.pi {
+  display: inline-block;
+  font: 400 14px/1 "{{ fontName }}", sans-serif;
+  font-size: inherit;
+  text-rendering: auto;
+  text-transform: none;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+{{# each codepoints }}
+
+.{{ ../classPrefix }}{{ @key }}:before {
+    content: "\\{{ this }}";
+}
+{{/ each }}

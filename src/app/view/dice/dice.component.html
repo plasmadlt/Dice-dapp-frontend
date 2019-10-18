@@ -1,0 +1,234 @@
+<app-jackpot [currencyCode]="form.get('currencyCode').value"></app-jackpot>
+
+<form [formGroup]="form" (submit)="submit()">
+
+  <!-- Bet amount, Payout on win, Slider -->
+  <div class="bet-settings">
+
+    <div class="amount-block">
+
+      <div class="input-block">
+
+        <label for="bet_amount">{{ 'bet_amount' | translate }}</label>
+
+        <div class="input">
+
+          <label for="bet_amount">
+            <span class="symbol" *ngIf="currency?.symbol">{{ currency.symbol }}</span>
+            <i class="icon pi" [ngClass]="currency.icon" *ngIf="currency?.icon"></i>
+          </label>
+
+          <input id="bet_amount"
+                 elastic-input
+                 appAmountInput
+                 formControlName="amount">
+
+        </div>
+
+        <div class="error-block" *ngIf="form.get('amount').touched">
+          <span *ngIf="form.get('amount').getError('required')">
+            {{ 'bet_required' | translate }}
+          </span>
+          <span *ngIf="form.get('amount').getError('lessThan')">
+            {{ 'bet_less_than' | translate : {min: form.get('amount').getError('lessThan')['min']} }}
+          </span>
+          <span *ngIf="form.get('amount').getError('greaterThan')">
+            {{ 'bet_greater_than' | translate }}
+          </span>
+        </div>
+
+      </div>
+
+      <div class="fix-buttons">
+
+        <button class="btn" type="button" (click)="form.get('amount').setValue(1)">
+          <span>{{ '1' }}</span>
+          <span class="symbol" *ngIf="currency?.symbol">{{ currency.symbol }}</span>
+          <i class="icon pi" *ngIf="currency?.icon" [ngClass]="currency.icon"></i>
+        </button>
+
+        <div class="separator"></div>
+
+        <button class="btn" type="button" (click)="form.get('amount').setValue(form.get('amount').value / 2)">
+          <span>{{ '1/2x' }}</span>
+        </button>
+
+        <div class="separator"></div>
+
+        <button class="btn" type="button" (click)="form.get('amount').value ? form.get('amount').setValue(form.get('amount').value * 2) : null">
+          <span>{{ '2x' }}</span>
+        </button>
+
+        <div class="separator"></div>
+
+        <button class="btn" type="button" (click)="form.get('amount').value ? form.get('amount').setValue(form.get('amount').value * 4) : null">
+          <span>{{ '4x' }}</span>
+        </button>
+
+      </div>
+
+      <div class="payout-win">
+
+        <label class="label">{{ 'payout_on_win' | translate }}</label>
+
+        <label class="label-sm">{{ 'payout' | translate }}</label>
+
+        <div class="count">
+          <span class="symbol" *ngIf="currency?.symbol">{{ currency.symbol }}</span>
+          <span class="icon pi" *ngIf="currency?.icon" [ngClass]="currency.icon"></span>
+          <span>{{ getPayoutToWin() | roundMoney | separateComas }}</span>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="chance-block">
+
+      <div class="left-block">
+
+        <label>{{ 'roll_under' | translate }}</label>
+
+        <span class="value"> {{ form.get('rollUnder').value }} </span>
+
+        <span class="end">{{ 'to_win' | translate }}</span>
+
+      </div>
+
+      <div class="right-block">
+
+        <label>{{ 'payout' | translate }}</label>
+        <label class="label-sm">{{ 'payout' | translate }}</label>
+
+        <span class="value"> {{ getPayoutMultiplier() + 'x' }} </span>
+
+      </div>
+
+      <div class="right-block">
+
+        <label>{{ 'chance_to_win' | translate }}</label>
+        <label class="label-sm">{{ 'chance' | translate }}</label>
+
+        <span class="value"> {{ (form.get('rollUnder').value - 1) + '%' }} </span>
+
+      </div>
+
+    </div>
+
+    <div class="slider-block">
+
+      <div class="value min">{{ '1' }}</div>
+
+      <app-slider class="bet-slider" formControlName="rollUnder" [max]="96" [min]="2" #slider="appSlider"></app-slider>
+
+      <div class="value max">{{ '100' }}</div>
+
+    </div>
+
+  </div>
+
+  <!-- Currency selector, result, Start button -->
+  <div class="game-result">
+
+    <div class="result-block">
+
+      <label>{{ 'your_balance' | translate }}</label>
+
+      <div class="inner-block">
+
+        <div class="currency-selector">
+
+          <div class="value" [class.disabled]="form.get('currencyCode').disabled">
+            {{ form.get('currencyCode').value | formatTokenCode  }}
+          </div>
+
+          <mat-select class="selector" formControlName="currencyCode">
+
+            <mat-option [value]="item?.code" *ngFor="let item of currencies">
+              <span class="label" *ngIf="item?.symbol">{{ item?.symbol }}</span>
+              <span class="label"> {{ item?.code | formatTokenCode }}</span>
+              <span class="name">{{ item?.title }}</span>
+            </mat-option>
+
+          </mat-select>
+
+        </div>
+
+        <div class="balance">
+          <span>{{ currency?.symbol }}</span>
+          <span>{{ getBalance() | roundMoney : (currency?.code === 'PLASMA' ? 'CRYPTO' : 'FIAT') | separateComas }}</span>
+        </div>
+
+        <div class="result" *ngIf="result" [class.lose]="result < 0"  [class.win]="result > 0">
+
+          <span class="value">{{ result | roundMoney : (currency?.code === 'PLASMA' ? 'CRYPTO' : 'FIAT') | separateComas }}</span>
+
+          <span class="lose-label"> {{ 'lose' | translate }}</span>
+          <span class="win-label"> {{ 'win' | translate }}</span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="start-block">
+
+      <button class="btn" [class.loading]="loading" *ngIf="!form.disabled">
+        <img src="./assets/images/loading.svg">
+        <span>{{ 'roll_dice' | translate }}</span>
+      </button>
+
+      <button class="btn sign" type="button" *ngIf="form.disabled && !loading" (click)="sign()">
+        <span>{{ 'sign_in_to_plasma' | translate }}</span>
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- Fee -->
+  <div class="additional-info">
+
+    <div class="transaction-fee">
+      <span>{{ 'transaction_fee' | translate : {fee: getTxFee()} }}</span>
+    </div>
+
+    <div class="game-fee">
+      <span>{{ 'game_fee' | translate : {fee: getGameFee()}  }}</span>
+    </div>
+
+    <div class="contract">
+      <span>{{ 'contract' | translate }} </span>
+      <a [href]="contractLink" target="_blank">{{ 'explorer' | translate }}</a>
+    </div>
+
+    <div class="sound" (click)="sound = !sound">
+      <i class="pi" [ngClass]="sound ? 'pi-speaker-on' : 'pi-speaker-off'"></i>
+    </div>
+
+    <div class="pay-fee-with" *ngIf="false">
+
+      <span>{{ 'pay_fee_with' | translate }} </span>
+
+      <label class="toggle">
+
+        <span [class.checked]="!form.get('payFeeWithPlasma').value">{{ 'token' | translate }}</span>
+
+        <input type="checkbox" formControlName="payFeeWithPlasma">
+        <span class="toggler"></span>
+
+        <span [class.checked]="form.get('payFeeWithPlasma').value">{{ 'plasma' | translate }}</span>
+
+      </label>
+
+    </div>
+
+  </div>
+
+</form>
+
+<div class="bets">
+  <app-bets-list #betList=betList></app-bets-list>
+</div>
+

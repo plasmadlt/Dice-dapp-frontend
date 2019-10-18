@@ -1,0 +1,135 @@
+@import "variables";
+
+@mixin clearfix() {
+
+  &::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}
+
+@mixin screen-xs {
+  @media only screen and (max-width: 599px) {
+    @content;
+  }
+}
+
+@mixin screen-sm {
+  @media only screen and (min-width: 600px) and (max-width: 959px) {
+    @content;
+  }
+}
+
+@mixin screen-md {
+  @media only screen and (min-width: 960px) and (max-width: 1279px) {
+    @content;
+  }
+}
+
+@mixin screen-lg {
+  @media only screen and (min-width: 1280px) and (max-width: 1919px) {
+    @content;
+  }
+}
+
+@mixin screen-xl {
+  @media only screen and (min-width: 1920px) and (max-width: 5000px) {
+    @content;
+  }
+}
+
+@mixin screen-lt-sm {
+  @media only screen and (max-width: 599px) {
+    @content;
+  }
+}
+
+@mixin screen-lt-md {
+  @media only screen and (max-width: 959px) {
+    @content;
+  }
+}
+
+@mixin screen-lt-lg {
+  @media only screen and (max-width: 1279px) {
+    @content;
+  }
+}
+
+@mixin screen-lt-xl {
+  @media only screen and (max-width: 1919px) {
+    @content;
+  }
+}
+
+@mixin screen-gt-xs {
+  @media only screen and (min-width: 600px) {
+    @content;
+  }
+}
+
+@mixin screen-gt-sm {
+  @media only screen and (min-width: 960px) {
+    @content;
+  }
+}
+
+@mixin screen-gt-md {
+  @media only screen and (min-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin screen-gt-lg {
+  @media only screen and (min-width: 1920px) {
+    @content;
+  }
+}
+
+@mixin media-breakpoint($min, $max) {
+  @if $min and $max {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  } @else if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else if $max {
+    @media (max-width: $max) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin translate($x, $y) {
+  -webkit-transform: translate($x, $y);
+  -ms-transform: translate($x, $y);
+  -o-transform: translate($x, $y);
+  transform: translate($x, $y);
+}
+
+@mixin translateX($x) {
+  -webkit-transform: translateX($x);
+  -ms-transform: translateX($x);
+  -o-transform: translateX($x);
+  transform: translateX($x);
+}
+
+@mixin translateY($y) {
+  -webkit-transform: translateY($y);
+  -ms-transform: translateY($y);
+  -o-transform: translateY($y);
+  transform: translateY($y);
+}
+
+@mixin transition($transition) {
+  transition: $transition;
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  -ms-transition: $transition;
+}

@@ -1,0 +1,13 @@
+<div class="jackpot">
+  <img class="common-background"  src="./assets/images/jackpot-background.png" alt="">
+  <img class="left-background" src="./assets/images/jackpot-left.png" alt="">
+  <img class="right-background"  src="./assets/images/jackpot-right.png" alt="">
+
+  <img class="label"  src="./assets/images/jackpot-label.png" alt="">
+
+  <div class="count">
+    <span>{{ getContractBalance() | roundMoney : (currencyCode === 'PLASMA' ? 'CRYPTO' : 'FIAT') | separateComas }}</span>
+    <span class="currency"> {{ currencyCode | formatTokenCode }}</span>
+  </div>
+
+</div>

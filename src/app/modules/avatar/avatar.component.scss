@@ -1,0 +1,34 @@
+
+.avatar {
+  position: relative;
+
+  .circle-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img, svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .marker {
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    height: 50%;
+    margin-right: -13%;
+    margin-bottom: -11%;
+    border-radius: 50%;
+    background: #FFFFFF;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .15);
+    position: absolute;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

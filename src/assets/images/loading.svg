@@ -1,0 +1,72 @@
+<svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path
+    opacity="1"
+    d="M10.3769 0.5C10.9697 0.5 11.3931 0.92 11.3931 1.508V5.456C11.3931 6.044 10.9697 6.506 10.3769 6.506C9.78412 6.506 9.31836 6.044 9.31836 5.456V1.508C9.31836 0.92 9.78412 0.5 10.3769 0.5Z"
+    fill="white">
+    <animate attributeType="CSS" attributeName="opacity" from="1" to="1" values="1; 0; 1" dur="1s"
+             repeatCount="indefinite" begin="0s"/>
+  </path>
+  <path
+    opacity="0.9"
+    d="M5.59175 2.72602L7.92056 5.91802C8.42866 6.59002 7.92056 7.55602 7.07372 7.55602C6.73498 7.55602 6.48093 7.43002 6.26922 7.13602L3.94041 3.94402C3.60168 3.48202 3.68636 2.85202 4.15212 2.51602C4.61788 2.18002 5.25301 2.26402 5.59175 2.72602Z"
+    fill="white">
+    <animate attributeType="CSS" attributeName="opacity" from="1" to="1" values="1; 0; 1" dur="1s"
+             repeatCount="indefinite" begin="0.1s"/>
+  </path>
+  <path
+    opacity="0.8"
+    d="M0.975024 9.068C0.424576 8.9 0.128182 8.31201 0.29755 7.76601C0.466918 7.22001 1.05971 6.92601 1.61016 7.09401L5.3786 8.31201C5.92905 8.48001 6.22545 9.068 6.05608 9.614C5.92905 10.034 5.46329 10.328 5.03987 10.328C4.91284 10.328 4.8705 10.286 4.74347 10.244L0.975024 9.068Z"
+    fill="white">
+    <animate attributeType="CSS" attributeName="opacity" from="1" to="1" values="1; 0; 1" dur="1s"
+             repeatCount="indefinite" begin="0.2s"/>
+  </path>
+  <path
+    opacity="0.7"
+    d="M6.05608 12.3859C6.22545 12.9319 5.92905 13.5199 5.3786 13.688L1.61016 14.906C1.48313 14.948 1.39845 14.948 1.27142 14.948C0.847998 14.948 0.424576 14.654 0.29755 14.234C0.128182 13.688 0.424576 13.0999 0.975024 12.9319L4.74347 11.7139C5.29392 11.5459 5.88671 11.8399 6.05608 12.3859Z"
+    fill="white">
+    <animate attributeType="CSS" attributeName="opacity" from="1" to="1" values="1; 0; 1" dur="1s"
+             repeatCount="indefinite" begin="0.3s"/>
+  </path>
+  <path
+    opacity="0.6"
+    d="M7.70782 14.654C8.17359 14.99 8.25827 15.62 7.91953 16.082L5.59071 19.274C5.379 19.568 5.0826 19.694 4.74387 19.694C3.89702 19.694 3.43126 18.728 3.93936 18.056L6.26819 14.864C6.60692 14.402 7.24206 14.318 7.70782 14.654Z"
+    fill="white">
+    <animate attributeType="CSS" attributeName="opacity" from="1" to="1" values="1; 0; 1" dur="1s"
+             repeatCount="indefinite" begin="0.4s"/>
+  </path>
+  <path
+    opacity="0.5"
+    d="M10.3769 15.494C10.9697 15.494 11.3931 15.956 11.3931 16.544V20.45C11.3931 21.038 10.9697 21.5 10.3769 21.5C9.78412 21.5 9.31836 21.038 9.31836 20.45V16.544C9.31836 15.956 9.78412 15.494 10.3769 15.494Z"
+    fill="white">
+    <animate attributeType="CSS" attributeName="opacity" from="1" to="1" values="1; 0; 1" dur="1s"
+             repeatCount="indefinite" begin="0.5s"/>
+  </path>
+  <path
+    opacity="0.4"
+    d="M14.4824 14.8638L16.8112 18.0558C17.3193 18.7278 16.8112 19.6938 15.9644 19.6938C15.6256 19.6938 15.3716 19.5678 15.1599 19.2738L12.831 16.0818C12.4923 15.6198 12.577 14.9898 13.0427 14.6538C13.5085 14.3178 14.1436 14.4018 14.4824 14.8638Z"
+    fill="white">
+    <animate attributeType="CSS" attributeName="opacity" from="1" to="1" values="1; 0; 1" dur="1s"
+             repeatCount="indefinite" begin="0.6s"/>
+  </path>
+  <path
+    opacity="0.3"
+    d="M19.7732 12.932C20.3236 13.1 20.62 13.688 20.4506 14.234C20.3236 14.654 19.8578 14.948 19.4344 14.948C19.3074 14.948 19.265 14.948 19.138 14.906L15.3696 13.688C14.8191 13.52 14.5227 12.932 14.6921 12.386C14.8615 11.84 15.4542 11.546 16.0047 11.714L19.7732 12.932Z"
+    fill="white">
+    <animate attributeType="CSS" attributeName="opacity" from="1" to="1" values="1; 0; 1" dur="1s"
+             repeatCount="indefinite" begin="0.7s"/>
+  </path>
+  <path
+    opacity="0.2"
+    d="M14.6921 9.61409C14.5227 9.0681 14.8191 8.4801 15.3696 8.3121L19.138 7.0941C19.6885 6.9261 20.2813 7.2201 20.4506 7.7661C20.62 8.3121 20.3236 8.9001 19.7732 9.0681L16.0047 10.2441C15.8777 10.2861 15.793 10.3281 15.666 10.3281C15.2425 10.3281 14.8191 10.0341 14.6921 9.61409Z"
+    fill="white">
+    <animate attributeType="CSS" attributeName="opacity" from="1" to="1" values="1; 0; 1" dur="1s"
+             repeatCount="indefinite" begin="0.8s"/>
+  </path>
+  <path
+    opacity="0.1"
+    d="M13.6364 7.55602C12.7896 7.55602 12.3238 6.59002 12.8319 5.91802L15.1608 2.72602C15.4995 2.26402 16.1346 2.18002 16.6004 2.51602C17.0662 2.85202 17.1509 3.48202 16.8121 3.94402L14.4833 7.13602C14.2716 7.43002 13.9752 7.55602 13.6364 7.55602Z"
+    fill="white">
+    <animate attributeType="CSS" attributeName="opacity" from="1" to="1" values="1; 0; 1" dur="1s"
+             repeatCount="indefinite" begin="0.9s"/>
+  </path>
+</svg>

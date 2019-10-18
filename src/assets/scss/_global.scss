@@ -1,0 +1,318 @@
+@import "variables";
+@import "mixins";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  font-size: 16px;
+  font-family: "Formular", sans-serif;
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+img[src^="https://mc.yandex.ru/pixel"] {
+  position: absolute;
+}
+
+// Common material backdrop
+.cdk-overlay-container {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+  position: fixed;
+  z-index: 1000;
+
+  .cdk-overlay-backdrop {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    pointer-events: auto;
+    -webkit-tap-highlight-color: transparent;
+    transition: opacity .4s cubic-bezier(.25,.8,.25,1);
+    opacity: 0;
+
+    &.cdk-overlay-backdrop-showing {
+      opacity: 1;
+    }
+
+
+    &.cdk-overlay-transparent-backdrop, &.cdk-overlay-transparent-backdrop.cdk-overlay-backdrop-showing {
+      opacity: 0;
+    }
+  }
+
+  .cdk-overlay-connected-position-bounding-box {
+    min-width: 1px;
+    min-height: 1px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1000;
+
+    .cdk-overlay-pane {
+      position: absolute;
+      pointer-events: auto;
+      box-sizing: border-box;
+      z-index: 1000;
+      display: flex;
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+}
+
+// Mat select panel
+.mat-select-panel-wrap {
+  flex-basis: 100%;
+
+  .mat-select-panel {
+    background: #FFFFFF;
+    border: 1px solid #E6E7F2;
+    box-sizing: border-box;
+    border-radius: 6px;
+
+    .mat-option {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-height: 48px;
+      height: 48px;
+      padding: 0 16px;
+      text-align: left;
+      text-decoration: none;
+      max-width: 100%;
+      position: relative;
+      cursor: pointer;
+      outline: 0;
+      display: block;
+      transition: background-color .2s ease-out;
+
+      .mat-option-text {
+        font-size: 14px;
+        display: block;
+        border-top: 1px solid #E6E7F2;
+
+        .label {
+          color: #476AF5;
+        }
+
+        .name {
+          margin-left: 10px;
+          color: #0F0B44;
+        }
+      }
+
+      &:hover {
+        background-color: #E6E7F2;
+      }
+
+      &:first-child {
+
+        .mat-option-text {
+          border-top: none;
+        }
+      }
+    }
+  }
+}
+
+// Material menu
+.mat-menu-panel {
+  background: #FFFFFF;
+  border: 1px solid #E6E7F2;
+  border-radius: 6px;
+
+  .mat-menu-content {
+
+    .mat-menu-item {
+      color: #0F0B44;
+      text-decoration: none;
+      border-bottom: 1px solid #E6E7F2;
+
+      img {
+        top: 3px;
+        margin-right: 15px;
+        position: relative;
+      }
+
+      &.gray-item {
+        color: #B7B7C8;
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    &:not(:empty) {
+      padding: 0 20px;
+    }
+  }
+}
+
+// Material tabs
+.mat-tab-group {
+
+  .mat-tab-header {
+
+    .mat-tab-label-container {
+
+      .mat-tab-list {
+
+        .mat-tab-labels {
+          display: flex;
+          justify-content: center;
+          border-bottom: 1px solid #372E82;
+
+          .mat-tab-label {
+            color: #FFF;
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+            opacity: 1;
+
+            .mat-ripple-element {
+              display: none;
+            }
+
+            &.mat-tab-label-active {
+              color: #476AF5;
+            }
+
+            &.mat-tab-disabled {
+              color: #6d6d6d;
+            }
+          }
+        }
+
+        .mat-ink-bar {
+          background-color: #476AF5;
+        }
+      }
+    }
+
+    .mat-tab-header-pagination {
+
+      .mat-tab-header-pagination-chevron {
+        border-color: #FFF;
+      }
+
+      .mat-ripple-element {
+        display: none;
+      }
+    }
+  }
+
+  @include screen-lt-sm {
+
+    .mat-tab-header {
+
+      .mat-tab-label-container {
+
+        .mat-tab-list {
+
+          .mat-tab-labels {
+
+            .mat-tab-label {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Spinner (loading indicator)
+.mat-spinner {
+
+  circle {
+    stroke: #F74749;
+  }
+}
+
+// Toggler
+.toggle {
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  input {
+    display: none;
+  }
+
+  .toggler {
+    width: 28px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: rgba(#FFFFFF, .5);
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+
+    &:after {
+      content: " ";
+      top: -2px;
+      left: 0;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #FFF;
+      transition: left .2s ease-out;
+      display: block;
+      position: absolute;
+    }
+  }
+
+  input:checked + .toggler {
+
+    &:after {
+      left: 14px;
+    }
+  }
+}
+
+// Buttons
+.btn {
+  outline: none;
+
+  &.btn-start {
+
+  }
+
+  &.btn-primary {
+    height: 50px;
+    width: 300px;
+    max-width: 100%;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #FFF;
+    transition: all .2s ease-out;
+    border: 2px solid #372E82;
+    background: transparent;
+    border-radius: 25px;
+    cursor: pointer;
+
+    &:hover {
+      background: rgba(67, 73, 200, 0.2);
+    }
+  }
+}

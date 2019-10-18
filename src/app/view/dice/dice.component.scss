@@ -1,0 +1,691 @@
+@import "../../../assets/scss/mixins";
+
+.bet-settings {
+  margin-top: 20px;
+  background: linear-gradient(180deg, rgba(67, 73, 200, 0.4) 0%, rgba(70, 60, 193, 0.4) 100%);
+  border-radius: 12px 12px 0 0;
+
+  .amount-block {
+    padding: 20px 30px 30px;
+    display: flex;
+    justify-content: space-between;
+
+    .input-block {
+      width: calc(66% - 200px);
+      color: #8782B4;
+      font-weight: 500;
+      border-bottom: 1px solid #6987FF;
+      position: relative;
+
+      > label {
+        height: 20px;
+        font-size: 16px;
+        display: block;
+      }
+
+      .input {
+        height: 54px;
+        font-size: 26px;
+        display: flex;
+        align-items: center;
+
+        label {
+          display: inline-block;
+
+          .symbol {
+            top: -1px;
+            font-size: 26px;
+            position: relative;
+          }
+
+          .icon {
+            font-size: 20px;
+            position: relative;
+          }
+        }
+
+        input {
+          width: 100%;
+          min-width: calc(100% - 24px);
+          margin-left: 5px;
+          font-size: 26px;
+          color: #FFF;
+          border: none;
+          background: transparent;
+          outline: none;
+        }
+      }
+
+      .error-block {
+        left: 0;
+        right: 0;
+        top: calc(100% + 3px);
+        font-weight: 400;
+        font-size: 12px;
+        color: #F74749;
+        position: absolute;
+      }
+    }
+
+    .fix-buttons {
+      min-width: 200px;
+      padding-top: 30px;
+      border-bottom: 1px solid #6987FF;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      .btn {
+        padding: 5px 10px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #6987FF;
+        background: transparent;
+        outline: none;
+        border: none;
+        transition: color .3s ease-out;
+        cursor: pointer;
+
+        .symbol {
+          margin-left: 2px;
+        }
+
+        .icon {
+          font-size: 13px;
+          margin-left: 4px;
+        }
+
+        &:last-child {
+          padding-right: 5px;
+          border-right: none;
+        }
+
+        &:hover {
+          color: #86c3ff;
+        }
+      }
+
+      .separator {
+        width: 1px;
+        min-width: 1px;
+        height: 30px;
+        background: rgba(#FFF, .1);
+      }
+    }
+
+    .payout-win {
+      width: 33%;
+      margin-left: 30px;
+      font-weight: 500;
+      border-bottom: 1px solid rgba(#FFFFFF, .2);
+
+      .label, .label-sm {
+        height: 20px;
+        color: #8782B4;
+        font-size: 16px;
+        display: block;
+      }
+
+      .label-sm {
+        margin-right: 5px;
+        font-size: 12px;
+        display: none;
+      }
+
+      .count {
+        padding: 11px 0;
+        font-size: 22px;
+        color: #39CF73;
+
+        .symbol {
+          margin-right: 3px;
+        }
+
+        .icon {
+          font-size: 16px;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+
+  .chance-block {
+    margin: 0 30px;
+    padding: 15px 20px;
+    background: rgba(15, 11, 68, 0.2);
+    border-radius: 8px;
+    white-space: nowrap;
+    display: flex;
+    align-items: baseline;
+
+    .left-block {
+      margin-right: auto;
+      color: #8782B4;
+      font-size: 16px;
+
+      .value {
+        font-size: 24px;
+        color: #FFF;
+      }
+    }
+
+    .right-block {
+      margin-left: 15px;
+      color: #8782B4;
+      font-size: 14px;
+
+      .label-sm {
+        font-size: 12px;
+        display: none;
+      }
+
+      .value {
+        font-size: 16px;
+        color: #39CF73;
+      }
+    }
+  }
+
+  .slider-block {
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+
+    .bet-slider {
+      width: 100%;
+    }
+
+    .value {
+      top: 2px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #FFF;
+      position: relative;
+
+      &.min {
+        margin-right: 15px;
+      }
+
+      &.max {
+        margin-left: 15px;
+      }
+    }
+  }
+
+  @include screen-lt-sm {
+
+    .amount-block {
+      padding: 10px 20px;
+      flex-wrap: wrap;
+
+      .input-block {
+        width: 100%;
+        margin-bottom: 5px;
+        padding-bottom: 5px;
+        display: flex;
+        align-items: center;
+
+        > label {
+          height: unset;
+          font-size: 12px;
+        }
+
+        .input {
+          height: 30px;
+          max-width: calc(100% - 100px);
+          margin-left: auto;
+          font-size: 22px;
+
+          label {
+            width: 28px;
+            min-width: 28px;
+            line-height: 30px;
+
+            .symbol {
+              font-size: 22px;
+            }
+
+            .icon {
+              font-size: 18px;
+            }
+          }
+
+          input {
+            font-size: 22px;
+          }
+        }
+
+        .error-block {
+          text-align: right;
+        }
+      }
+
+      .fix-buttons {
+        min-width: 100px;
+        padding-top: 16px;
+        border-bottom: none;
+
+        .btn {
+          padding: 1px 7px;
+          font-size: 13px;
+
+          .icon {
+            font-size: 10px;
+          }
+
+          &:first-child {
+            padding-left: 0;
+          }
+        }
+
+        .separator {
+          height: 18px;
+        }
+      }
+
+      .payout-win {
+        margin-left: 0;
+        padding-top: 15px;
+        border-bottom: none;
+        display: flex;
+        align-items: baseline;
+        justify-content: flex-end;
+
+        .label {
+          display: none;
+        }
+
+        .label-sm {
+          display: block;
+        }
+
+        .count {
+          padding: 0;
+          font-size: 14px;
+
+          .icon {
+            font-size: 10px;
+          }
+        }
+      }
+    }
+
+    .chance-block {
+      margin: 5px 20px;
+      padding: 10px 15px;
+
+      .left-block {
+        text-align: center;
+
+        label {
+          font-size: 12px;
+          display: block;
+        }
+
+        .value {
+          font-size: 18px;
+          display: block;
+        }
+
+        .end {
+          display: none;
+        }
+      }
+
+      .right-block {
+        text-align: center;
+
+        label {
+          display: none;
+        }
+
+        .label-sm {
+          display: block;
+        }
+
+        .value {
+          margin-top: 4px;
+          font-size: 14px;
+          display: block;
+        }
+      }
+    }
+
+    .slider-block {
+      padding: 5px 20px;
+
+      .value {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.game-result {
+  padding: 25px 30px;
+  background: linear-gradient(180deg, rgba(67, 72, 194, 0.15) 0%, rgba(64, 55, 182, 0.15) 100%);
+  border-radius: 0 0 12px 12px;
+  display: flex;
+
+  .result-block {
+    width: calc(100% - 280px);
+
+    label {
+      margin-top: -10px;
+      font-size: 16px;
+      color: #8782B4;
+      display: block;
+    }
+
+    .inner-block {
+      height: 50px;
+      font-size: 20px;
+      font-weight: 500;
+      border-bottom: 2px solid rgba(#FFFFFF, .1);
+      display: flex;
+      align-items: center;
+
+      .currency-selector {
+        position: relative;
+
+        .value {
+          padding-right: 24px;
+          color: #6987FF;
+          position: relative;
+
+          &:after, &:before {
+            content: " ";
+            width: 5px;
+            height: 5px;
+            right: 3px;
+            border: solid #6987FF;
+            border-width: 2px 2px 0 0;
+            display: block;
+            position: absolute;
+          }
+
+          &:after {
+            bottom: 5px;
+            transform: rotate(-225deg);
+          }
+
+          &:before {
+            top: 5px;
+            transform: rotate(-45deg);
+          }
+
+          &.disabled {
+            color: #8782B4;
+
+            &:after, &:before {
+              border-color: #8782B4;
+            }
+          }
+        }
+
+        .selector {
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          position: absolute;
+          opacity: 0;
+          z-index: 2;
+        }
+      }
+
+      .balance {
+        margin-left: 15px;
+        color: #FFF;
+      }
+
+      .result {
+        margin-left: auto;
+        display: none;
+
+        &.lose {
+          display: block;
+          color: #F74749;
+
+          .win-label {
+            display: none;
+          }
+        }
+
+        &.win {
+          display: block;
+          color: #39CF73;
+
+          .lose-label {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .start-block {
+    margin-left: auto;
+
+    .btn {
+      height: 60px;
+      width: 250px;
+      color: #FFFFFF;
+      font-size: 24px;
+      font-weight: 600;
+      text-transform: uppercase;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      background: linear-gradient(180deg, #4AED89 0%, #3DDA7A 52.48%, #37D072 52.49%, #2DC166 100%);
+      box-shadow: inset 0 0 40px #63FFA0, 0 4px 0 #25A556;
+      transition: background .2s ease-out;
+      outline: none;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      position: relative;
+
+      img {
+        display: none;
+      }
+
+      &:hover:not(.loading) {
+        box-shadow: inset 0 0 40px #63FFA0, 0 4px 0 #25A556, 0 0 40px rgba(59, 213, 118, 0.5);
+      }
+
+      &:active:not(.loading) {
+        top: 4px;
+        background: linear-gradient(180deg, #40DA7C 0%, #38CF72 52.48%, #31C56A 52.49%, #27B25D 100%);
+        box-shadow: inset 0 0 40px rgba(99, 255, 160, 0.8), 0 0 0 #25A556, 0 0 40px rgba(59, 213, 118, 0.5);
+      }
+
+      &.loading {
+        background: linear-gradient(180deg, #4340CE 0%, #3836BB 52.48%, #3533B1 52.49%, #312EA4 100%);
+        box-shadow: inset 0 0 40px rgba(72, 70, 221, 0.8), 0 4px 0 #2A288D;
+
+        span {
+          display: none;
+        }
+
+        img {
+          display: inline-block;
+        }
+      }
+
+      &.sign {
+        font-size: 20px;
+      }
+    }
+  }
+
+  @include screen-lt-md {
+    padding: 0;
+    background: transparent;
+    flex-direction: column;
+    align-items: center;
+
+    .result-block {
+      width: 100%;
+      padding: 25px 30px;
+      background: linear-gradient(180deg, rgba(67, 72, 194, 0.15) 0%, rgba(64, 55, 182, 0.15) 100%);
+      border-radius: 0 0 12px 12px;
+
+      .inner-block {
+        border-bottom: none;
+      }
+    }
+
+    .start-block {
+      margin: 25px 0 0;
+    }
+  }
+
+  @include screen-lt-sm {
+
+    .result-block {
+      padding: 20px;
+
+      label {
+        display: none;
+      }
+
+      .inner-block {
+        height: 20px;
+        font-size: 14px;
+
+        .currency-selector {
+
+          .value {
+            padding-right: 15px;
+
+            &:after, &:before {
+              right: 5px;
+              width: 4px;
+              height: 4px;
+              border-width: 1px 1px 0 0;
+            }
+
+            &:after {
+              bottom: 3px;
+            }
+
+            &:before {
+              top: 3px;
+            }
+          }
+        }
+
+        .balance {
+          margin-left: 10px;
+        }
+
+        .result {
+
+          .win-label, .lose-label {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .start-block {
+      width: 100%;
+
+      .btn {
+        height: 50px;
+        width: 100%;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+.additional-info {
+  padding: 20px 0;
+  font-size: 14px;
+  color: #8782B4;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  .transaction-fee, .game-fee {
+
+    &:after {
+      content: " ";
+      width: 3px;
+      height: 3px;
+      margin: 3px 6px;
+      border-radius: 50%;
+      background-color: #8782B4;
+      display: inline-block;
+    }
+  }
+
+  .contract {
+
+    a {
+      color: #8782B4;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .sound {
+    top: 3px;
+    height: 20px;
+    margin: 0 0 0 auto;
+    font-size: 22px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .pay-fee-with {
+
+    .toggle {
+
+      .checked {
+        color: #FFF;
+      }
+
+      .toggler {
+        margin: 0 6px 0;
+        position: relative;
+      }
+    }
+  }
+
+  @include screen-lt-md {
+    font-size: 12px;
+    line-height: 22px;
+    justify-content: center;
+
+    .transaction-fee {
+      width: 100%;
+      text-align: center;
+
+      &:after {
+        display: none;
+      }
+    }
+
+    .sound {
+      width: 100%;
+      margin-top: 3px;
+      text-align: center;
+      order: 2;
+    }
+
+    .pay-fee-with {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+.bets {
+  min-height: 500px;
+  padding: 15px 0 70px;
+}
+

@@ -1,0 +1,92 @@
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixins";
+
+.header {
+  height: 80px;
+  padding: 0 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .logo {
+    height: 100%;
+    padding: 7px 0;
+
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  .auth {
+    margin-left: auto;
+    padding-right: 35px;
+  }
+
+  .user {
+    margin-left: auto;
+    padding: 0 25px;
+    font-size: 16px;
+    color: #878787;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    .name, .open {
+      margin-left: 15px;
+    }
+  }
+
+  @include screen-lt-md {
+    padding: 0;
+  }
+
+  @include screen-lt-sm {
+    height: 60px;
+
+    .logo {
+      display: none;
+    }
+  }
+}
+
+.content {
+  background: #1D1468;
+  position: relative;
+
+  .background {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+
+    .image {
+      left: 50%;
+      width: 1332px;
+      height: 601px;
+      transform: translateX(-50%);
+      position: absolute;
+      z-index: 1;
+    }
+
+    .gradient {
+      left: 50%;
+      width: 1332px;
+      height: 601px;
+      background: radial-gradient(ellipse at top, #15009aab 0%, #1d1468 70%);
+      transform: translateX(-50%);
+      position: absolute;
+      z-index: 2;
+    }
+  }
+
+  .container {
+    width: 800px;
+    max-width: calc(100% - 30px);
+    margin: 0 auto;
+    padding-top: 1px;
+    position: relative;
+    z-index: 2;
+  }
+}
